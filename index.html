@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portafolio de Mario, diseñador hipermedia enfocado en audiovisual y diseño digital." />
+    <title>Mario | Diseñador Hipermedia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/marca3d.css" />
+    <link rel="stylesheet" href="css/servicios.css" />
+    <link rel="stylesheet" href="css/proyectos.css" />
+    <link rel="stylesheet" href="css/contacto.css" />
+  </head>
+  <body>
+    <header class="encabezado">
+      <a class="logo" href="#inicio" aria-label="Ir al inicio">M<span>_</span></a>
+      <nav class="menu" id="menu-principal" aria-label="Navegación principal">
+        <a href="#inicio"><span class="menu-num">01</span>Inicio</a>
+        <a href="#acerca"><span class="menu-num">02</span>Acerca de mí</a>
+        <a href="#servicios"><span class="menu-num">03</span>Mis servicios</a>
+        <a href="#trabajos"><span class="menu-num">04</span>Proyectos</a>
+        <a href="#contacto"><span class="menu-num">05</span>Contacto</a>
+        <div class="menu-pie">
+          <a class="boton" href="#contacto">Hablemos <span aria-hidden="true">↗</span></a>
+          <p>marjunioralban@gmail.com</p>
+        </div>
+      </nav>
+      <div class="encabezado-acciones">
+        <a class="boton boton-pequeno" href="#contacto">Hablemos</a>
+        <button class="menu-boton" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <div class="menu-fondo" aria-hidden="true"></div>
+
+    <main>
+      <section class="hero" id="inicio" aria-roledescription="carrusel" aria-label="Proyectos destacados">
+        <p class="hero-tiempo" aria-hidden="true">REC <span>00:00:00:00</span></p>
+
+        <div class="hero-slides">
+          <article class="hero-slide activo" data-proyecto="LINCE · Película interactiva" aria-roledescription="diapositiva" aria-label="1 de 3">
+            <video class="hero-video" src="videos/hero/hero-lince.mp4" poster="imagenes/proyectos/lince.jpg" muted loop playsinline preload="auto"></video>
+            <div class="hero-contenido">
+              <p class="hero-ranking anim"><span class="top">TOP<b>1</b></span>en el portafolio</p>
+              <p class="hero-tipo anim">Película interactiva · Tú decides</p>
+              <h2 class="hero-titulo">LINCE</h2>
+              <ul class="hero-meta anim"><li>2026</li><li>Drama psicológico</li><li>7 escenas</li><li>3 decisiones</li><li>Con Jossie Acuña</li></ul>
+              <p class="hero-desc anim">Andrés vive pesadillas que no lo dejan en paz. Su padrino, El Lince, sabe algo sobre la muerte de su padre. Tú eliges: ¿confiar en él o buscar venganza?</p>
+              <div class="hero-botones anim">
+                <button class="hero-reproducir" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16l13-8z"/></svg>Jugar la película</button>
+                <button class="hero-info" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6M12 7.5v.5"/></svg>Más info</button>
+              </div>
+            </div>
+            <p class="hero-frase" aria-hidden="true">¿Confías en él?</p>
+          </article>
+          <article class="hero-slide" data-proyecto="Salud mental" aria-roledescription="diapositiva" aria-label="2 de 3">
+            <video class="hero-video" src="videos/hero/hero-salud-mental.mp4" poster="imagenes/video-salud-mental-portada.jpg" muted loop playsinline preload="metadata"></video>
+            <div class="hero-contenido">
+              <p class="hero-ranking anim"><span class="top">TOP<b>2</b></span>en cortometrajes</p>
+              <p class="hero-tipo anim">Cortometraje</p>
+              <h2 class="hero-titulo">SALUD MENTAL</h2>
+              <ul class="hero-meta anim"><li>2026</li><li>Drama</li><li>1:00</li><li>Dirección · rodaje · edición</li></ul>
+              <p class="hero-desc anim">La ansiedad no siempre hace ruido. Un corto sobre la presión que se vive en silencio: en un balcón, en la biblioteca, frente a una pantalla.</p>
+              <div class="hero-botones anim">
+                <button class="hero-reproducir" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16l13-8z"/></svg>Reproducir</button>
+                <button class="hero-info" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6M12 7.5v.5"/></svg>Más info</button>
+              </div>
+            </div>
+            <p class="hero-frase" aria-hidden="true">No todos dicen lo que sienten.</p>
+          </article>
+          <article class="hero-slide" data-proyecto="La Central · Intro animada" aria-roledescription="diapositiva" aria-label="3 de 3">
+            <video class="hero-video" src="videos/hero/hero-la-central.mp4" poster="imagenes/proyectos/la-central.jpg" muted loop playsinline preload="metadata"></video>
+            <div class="hero-contenido">
+              <p class="hero-ranking anim"><span class="top">TOP<b>3</b></span>en motion graphics</p>
+              <p class="hero-tipo anim">Motion graphics · After Effects</p>
+              <h2 class="hero-titulo">LA CENTRAL</h2>
+              <ul class="hero-meta anim"><li>2026</li><li>Intro animada</li><li>0:14</li><li>After Effects + IA</li></ul>
+              <p class="hero-desc anim">Un balón sale disparado de la cancha y se convierte en marca. Intro animada para La Central: fútbol, sabor y diversión.</p>
+              <div class="hero-botones anim">
+                <button class="hero-reproducir" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16l13-8z"/></svg>Reproducir</button>
+                <button class="hero-info" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6M12 7.5v.5"/></svg>Más info</button>
+              </div>
+            </div>
+            <p class="hero-frase" aria-hidden="true">Fútbol, sabor y diversión.</p>
+          </article>
+        </div>
+
+        <div class="hero-selector" role="group" aria-label="Elegir proyecto">
+          <button class="hero-mini activo" type="button" data-indice="0" aria-label="Ver LINCE">
+            <img src="imagenes/proyectos/lince.jpg" alt="" />
+            <span class="hero-mini-texto"><b>01</b>LINCE</span>
+            <span class="hero-mini-barra"><i></i></span>
+          </button>
+          <button class="hero-mini" type="button" data-indice="1" aria-label="Ver Salud mental">
+            <img src="imagenes/video-salud-mental-portada.jpg" alt="" />
+            <span class="hero-mini-texto"><b>02</b>Salud mental</span>
+            <span class="hero-mini-barra"><i></i></span>
+          </button>
+          <button class="hero-mini" type="button" data-indice="2" aria-label="Ver La Central">
+            <img src="imagenes/proyectos/la-central.jpg" alt="" />
+            <span class="hero-mini-texto"><b>03</b>La Central</span>
+            <span class="hero-mini-barra"><i></i></span>
+          </button>
+        </div>
+
+        <div class="hero-controles">
+          <button class="hero-pausa" type="button" aria-label="Pausar carrusel" aria-pressed="false"><span></span></button>
+          <p class="hero-contador"><b>01</b> / 03</p>
+          <h1 class="hero-firma"><span class="rec-punto" aria-hidden="true"></span>Mario Alban <span>Diseñador hipermedia · audiovisual</span></h1>
+        </div>
+        <a class="hero-bajar" href="#trabajos">Ver todos los proyectos <span aria-hidden="true">↓</span></a>
+      </section>
+
+      <section class="seccion acerca" id="acerca">
+        <div class="numero">01</div>
+        <div class="foto-perfil">
+          <img src="imagenes/mario-retrato.jpg" alt="Retrato de Mario, diseñador hipermedia" />
+        </div>
+        <div class="contenido-seccion">
+          <p class="etiqueta">Acerca de mí</p>
+          <h2>Diseño con intención, ritmo y personalidad.</h2>
+          <p>Me apasiona contar historias con imagen, movimiento y sonido. Combino curiosidad, sensibilidad visual y herramientas digitales para crear proyectos memorables.</p>
+          <p>Desde una identidad visual hasta un video para redes, busco que cada detalle comunique algo.</p>
+          <a class="enlace-texto" href="#contacto">Trabajemos juntos →</a>
+        </div>
+      </section>
+
+      <section class="seccion marca3d" id="marca">
+        <div class="contenido-seccion">
+          <p class="etiqueta">Modelo 3D · Mi marca</p>
+          <h2>Una M que nunca está <em>quieta.</em></h2>
+          <p>Mi logo es una sola línea: nace en un punto de grabación y termina en un play. Lo modelé en 3D para que puedas tomarlo, girarlo y verlo desde cualquier ángulo.</p>
+          <div class="marca3d-controles" role="group" aria-label="Acabado del modelo">
+            <button class="filtro activo" type="button" data-acabado="original">Original</button>
+            <button class="filtro" type="button" data-acabado="lima">Lima</button>
+            <button class="filtro" type="button" data-acabado="cromo">Cromo</button>
+          </div>
+          <div class="marca3d-controles">
+            <button class="marca3d-accion" type="button" id="modelo-giro" aria-pressed="true">Giro automático</button>
+            <button class="marca3d-accion" type="button" id="modelo-reiniciar">Reiniciar vista</button>
+          </div>
+          <ul class="marca3d-datos">
+            <li><b>6.109</b> vértices</li>
+            <li><b>10.884</b> triángulos</li>
+            <li><b>GLB</b> formato</li>
+          </ul>
+        </div>
+        <div class="marca3d-escena">
+          <model-viewer id="modelo-logo" src="modelos/logo-m.glb" alt="Modelo 3D del logo de Mario Alban: una M inclinada que va de un punto REC a un play"
+            camera-controls disable-zoom touch-action="pan-y" auto-rotate auto-rotate-delay="0" rotation-per-second="26deg"
+            interaction-prompt="none" camera-orbit="-28deg 76deg auto" min-camera-orbit="auto 25deg auto" max-camera-orbit="auto 130deg auto"
+            shadow-intensity="1.2" shadow-softness="0.9" exposure="1.15" loading="eager"></model-viewer>
+          <span class="marca3d-esquina"></span><span class="marca3d-esquina"></span><span class="marca3d-esquina"></span><span class="marca3d-esquina"></span>
+          <p class="marca3d-rec" aria-hidden="true"><i></i>REC · 3D</p>
+          <p class="marca3d-pista">Arrastra para girar <span aria-hidden="true">↔</span></p>
+        </div>
+      </section>
+
+      <section class="seccion servicios" id="servicios">
+        <div class="numero">02</div>
+        <div class="servicios-cabecera">
+          <div>
+            <p class="etiqueta">Mis servicios</p>
+            <h2>Ideas digitales para marcas que quieren ser <em>vistas.</em></h2>
+          </div>
+          <p class="servicios-intro">Del guion a la pantalla y del boceto a la web: diseño, grabo, edito, animo y programo. Todo con una misma mirada creativa.</p>
+        </div>
+
+        <div class="cinta" aria-hidden="true">
+          <div class="cinta-pista">
+            <span>Premiere Pro</span><span>After Effects</span><span>Photoshop</span><span>Illustrator</span><span>Lightroom</span><span>HTML · CSS · JS</span><span>Diseño responsive</span><span>Storytelling</span>
+            <span>Premiere Pro</span><span>After Effects</span><span>Photoshop</span><span>Illustrator</span><span>Lightroom</span><span>HTML · CSS · JS</span><span>Diseño responsive</span><span>Storytelling</span>
+          </div>
+        </div>
+
+        <div class="grid-servicios">
+          <article class="servicio servicio-ancho servicio-imagen servicio-imagen-salud">
+            <div class="servicio-top"><span class="servicio-num">01</span><svg class="servicio-icono" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="6" width="14" height="12" rx="1"/><path d="M16 10l6-3v10l-6-3"/></svg></div>
+            <h3>Producción audiovisual</h3>
+            <p>Videos corporativos, cortometrajes, videoclips y piezas con mensaje, como mi proyecto <em>Salud mental</em>. Me encargo de la idea, el guion, el rodaje, la edición y el color.</p>
+            <ul class="etiquetas"><li>Guion</li><li>Rodaje</li><li>Edición</li><li>Color</li><li>Sonido</li></ul>
+            <a class="servicio-cta" href="#contacto" data-servicio="Producción audiovisual">Cotizar proyecto <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="servicio">
+            <div class="servicio-top"><span class="servicio-num">02</span><svg class="servicio-icono" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="15" rx="1"/><path d="M2 7h20M8 21h8M12 18v3M9 11l-2 2 2 2M15 11l2 2-2 2"/></svg></div>
+            <h3>Páginas web</h3>
+            <p>Portafolios, landing pages y sitios responsive con formularios que funcionan, rápidos y bien diseñados.</p>
+            <ul class="etiquetas"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            <a class="servicio-cta" href="#contacto" data-servicio="Páginas web">Cotizar <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="servicio">
+            <div class="servicio-top"><span class="servicio-num">03</span><svg class="servicio-icono" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4z"/><path d="M19 19l3 3"/></svg></div>
+            <h3>Videos interactivos</h3>
+            <p>Historias donde el público decide, como mi película <em>LINCE</em>: rutas que se ramifican, botones dentro del video y una web que reproduce la historia según cada elección.</p>
+            <ul class="etiquetas"><li>Narrativa no lineal</li><li>Hipermedia</li></ul>
+            <a class="servicio-cta" href="#contacto" data-servicio="Videos interactivos">Cotizar <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="servicio">
+            <div class="servicio-top"><span class="servicio-num">04</span><svg class="servicio-icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18c3-9 6-12 8-12s3 4 4 6 2 4 4 4"/><circle cx="4" cy="18" r="1.5"/><circle cx="20" cy="16" r="1.5"/></svg></div>
+            <h3>Motion graphics</h3>
+            <p>Logos animados, títulos, transiciones e infografías en movimiento que le dan ritmo a tu marca.</p>
+            <ul class="etiquetas"><li>After Effects</li><li>Animación 2D</li></ul>
+            <a class="servicio-cta" href="#contacto" data-servicio="Motion graphics">Cotizar <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="servicio">
+            <div class="servicio-top"><span class="servicio-num">05</span><svg class="servicio-icono" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2M10 9l4 2-4 2z"/></svg></div>
+            <h3>Contenido para redes</h3>
+            <p>Reels, TikToks y campañas con formato vertical, ganchos en los primeros segundos y subtítulos dinámicos.</p>
+            <ul class="etiquetas"><li>Reels</li><li>TikTok</li><li>Campañas</li></ul>
+            <a class="servicio-cta" href="#contacto" data-servicio="Contenido para redes">Cotizar <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="servicio servicio-ancho servicio-imagen servicio-imagen-banner">
+            <div class="servicio-top"><span class="servicio-num">06</span><svg class="servicio-icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 7h7l-5.5 4.5 2 7.5L12 16.5 5.5 21l2-7.5L2 9h7z"/></svg></div>
+            <h3>Diseño gráfico y banners</h3>
+            <p>Identidad visual, banners web, portadas y piezas publicitarias en Photoshop e Illustrator, como el banner de esta página.</p>
+            <ul class="etiquetas"><li>Photoshop</li><li>Illustrator</li><li>Identidad</li><li>Banners</li></ul>
+            <a class="servicio-cta" href="#contacto" data-servicio="Diseño gráfico y banners">Cotizar proyecto <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="servicio servicio-ancho">
+            <div class="servicio-top"><span class="servicio-num">07</span><svg class="servicio-icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><circle cx="12" cy="13" r="4"/></svg></div>
+            <h3>Fotografía y retoque</h3>
+            <p>Retratos, producto y eventos, con revelado y retoque en Lightroom y Photoshop para que cada imagen cuente algo.</p>
+            <ul class="etiquetas"><li>Lightroom</li><li>Retrato</li><li>Producto</li><li>Eventos</li></ul>
+            <a class="servicio-cta" href="#contacto" data-servicio="Fotografía y retoque">Cotizar <span aria-hidden="true">→</span></a>
+          </article>
+
+          <a class="servicio servicio-ancho servicio-llamado" href="#contacto" data-servicio="Otro">
+            <span class="servicio-num">+</span>
+            <h3>¿Tienes algo distinto en mente?</h3>
+            <p>Si tu idea mezcla varias cosas o no está en la lista, cuéntamela y la armamos juntos.</p>
+            <span class="llamado-flecha" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="seccion trabajos" id="trabajos">
+        <div class="numero">03</div>
+        <div class="trabajos-cabecera">
+          <div>
+            <p class="etiqueta">Proyectos seleccionados</p>
+            <h2>Una muestra de lo que puedo <em>crear.</em></h2>
+          </div>
+          <div class="filtros" role="group" aria-label="Filtrar proyectos">
+            <button class="filtro activo" type="button" data-filtro="todos" aria-pressed="true">Todos</button>
+            <button class="filtro" type="button" data-filtro="audiovisual" aria-pressed="false">Audiovisual</button>
+            <button class="filtro" type="button" data-filtro="interactivo" aria-pressed="false">Interactivo</button>
+            <button class="filtro" type="button" data-filtro="ia" aria-pressed="false">IA generativa</button>
+            <button class="filtro" type="button" data-filtro="diseno" aria-pressed="false">Motion y diseño</button>
+            <button class="filtro" type="button" data-filtro="web" aria-pressed="false">Web</button>
+            <button class="filtro" type="button" data-filtro="audio" aria-pressed="false">Podcast</button>
+          </div>
+        </div>
+
+        <div class="galeria">
+          <button class="proyecto proyecto-destacado" type="button" data-categoria="interactivo audiovisual web" data-tipo="interactivo" data-src="proyectos/lince/index.html" data-titulo="LINCE · Película interactiva" data-desc="Drama psicológico de suspenso en el que tú decides. Andrés vive pesadillas repetidas, trabaja para su padrino El Lince y busca entender la muerte de su padre. Tres decisiones lo llevan a finales distintos. Hecho con Jossie Acuña para Profundización 1 de Diseño Hipermedia: guion, rodaje, edición en Premiere y DaVinci, y la página web interactiva.">
+            <span class="proyecto-media">
+              <img src="imagenes/proyectos/lince.jpg" alt="" loading="lazy" />
+              <video src="videos/proyectos/lince-preview.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+            </span>
+            <span class="proyecto-insignia" aria-hidden="true">Tú decides</span>
+            <span class="proyecto-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="proyecto-duracion">7 escenas · 3 decisiones</span>
+            <span class="proyecto-info">
+              <span class="proyecto-meta">Película interactiva · Diseño hipermedia · 2026</span>
+              <span class="proyecto-titulo">LINCE</span>
+              <span class="proyecto-desc">Un drama psicológico donde el espectador decide: ¿confiar en El Lince o buscar venganza? Tres decisiones, varios finales y una web que reproduce la historia según lo que elijas.</span>
+              <span class="proyecto-tags"><span>Guion interactivo</span><span>Rodaje</span><span>Edición</span><span>Web interactiva</span><span>Con Jossie Acuña</span></span>
+              <span class="proyecto-accion">Jugar la película <span aria-hidden="true">▶</span></span>
+            </span>
+          </button>
+
+          <button class="proyecto" type="button" data-categoria="audiovisual" data-tipo="video" data-src="videos/salud-mental.mp4" data-titulo="Salud mental" data-desc="Cortometraje sobre la ansiedad y la presión académica que se viven en silencio. Idea, rodaje, edición y corrección de color.">
+            <span class="proyecto-media">
+              <img src="imagenes/video-salud-mental-portada.jpg" alt="" loading="lazy" />
+              <video src="videos/salud-mental-preview.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+            </span>
+            <span class="proyecto-duracion">1:00</span>
+            <span class="proyecto-info">
+              <span class="proyecto-meta">Cortometraje · 2026</span>
+              <span class="proyecto-titulo">Salud mental</span>
+              <span class="proyecto-tags"><span>Rodaje</span><span>Edición</span><span>Color</span></span>
+              <span class="proyecto-accion">Ver video <span aria-hidden="true">▶</span></span>
+            </span>
+          </button>
+
+          <button class="proyecto" type="button" data-categoria="audiovisual ia" data-tipo="video" data-src="videos/proyectos/nova-power.mp4" data-titulo="NOVA POWER · Comercial" data-desc="Comercial para una bebida energética gamer, del storyboard al render final. Las escenas se generaron con IA (Veo) a partir de un storyboard y se editaron en Premiere con diseño sonoro, transiciones y el logo animado.">
+            <span class="proyecto-media">
+              <img src="imagenes/proyectos/nova-power.jpg" alt="" loading="lazy" />
+              <video src="videos/proyectos/nova-power-preview.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+            </span>
+            <span class="proyecto-duracion">0:38</span>
+            <span class="proyecto-info">
+              <span class="proyecto-meta">Comercial · IA generativa · 2026</span>
+              <span class="proyecto-titulo">NOVA POWER</span>
+              <span class="proyecto-tags"><span>Storyboard</span><span>IA</span><span>Edición</span><span>SFX</span></span>
+              <span class="proyecto-accion">Ver comercial <span aria-hidden="true">▶</span></span>
+            </span>
+          </button>
+
+          <button class="proyecto proyecto-ancho" type="button" data-categoria="audiovisual ia" data-tipo="video" data-src="videos/proyectos/a-las-4.mp4" data-titulo="A las 4 AM" data-desc="Cortometraje documental de corte cultural sobre las madrugadas de cocina tradicional costeña y cómo la tradición pasa a la siguiente generación. Fuego, humo y amanecer como elementos narrativos, todo creado con IA generativa a partir de un guion técnico propio.">
+            <span class="proyecto-media">
+              <img src="imagenes/proyectos/a-las-4.jpg" alt="" loading="lazy" />
+              <video src="videos/proyectos/a-las-4-preview.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+            </span>
+            <span class="proyecto-duracion">2:14</span>
+            <span class="proyecto-info">
+              <span class="proyecto-meta">Cortometraje documental · IA generativa · 2026</span>
+              <span class="proyecto-titulo">A las 4 AM</span>
+              <span class="proyecto-desc">Un corto sobre la madrugada, el fogón y la tradición que pasa de una generación a otra.</span>
+              <span class="proyecto-tags"><span>Guion técnico</span><span>IA</span><span>Edición</span><span>Color</span></span>
+              <span class="proyecto-accion">Ver corto <span aria-hidden="true">▶</span></span>
+            </span>
+          </button>
+
+          <button class="proyecto" type="button" data-categoria="diseno ia" data-tipo="video" data-src="videos/proyectos/la-central.mp4" data-titulo="La Central · Intro animada" data-desc="Intro animada para La Central, «fútbol, sabor y diversión»: el balón sale de la cancha y se transforma en el logo. Composición y animación en After Effects con planos generados con IA.">
+            <span class="proyecto-media">
+              <img src="imagenes/proyectos/la-central.jpg" alt="" loading="lazy" />
+              <video src="videos/proyectos/la-central-preview.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+            </span>
+            <span class="proyecto-duracion">0:14</span>
+            <span class="proyecto-info">
+              <span class="proyecto-meta">Motion graphics · After Effects</span>
+              <span class="proyecto-titulo">La Central</span>
+              <span class="proyecto-tags"><span>Logo animado</span><span>After Effects</span><span>IA</span></span>
+              <span class="proyecto-accion">Ver animación <span aria-hidden="true">▶</span></span>
+            </span>
+          </button>
+
+          <button class="proyecto" type="button" data-categoria="audiovisual" data-tipo="video" data-src="videos/proyectos/poeticas.mp4" data-titulo="Poéticas Fotográficas Afro" data-desc="Registro audiovisual de un taller de fotografía con jóvenes afrodescendientes en Mahates, Bolívar: cámaras, retratos, baile, territorio y tomas aéreas con dron.">
+            <span class="proyecto-media">
+              <img src="imagenes/proyectos/poeticas.jpg" alt="" loading="lazy" />
+              <video src="videos/proyectos/poeticas-preview.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+            </span>
+            <span class="proyecto-duracion">1:29</span>
+            <span class="proyecto-info">
+              <span class="proyecto-meta">Documental · 2025</span>
+              <span class="proyecto-titulo">Poéticas Fotográficas Afro</span>
+              <span class="proyecto-tags"><span>Documental</span><span>Dron</span><span>Edición</span></span>
+              <span class="proyecto-accion">Ver documental <span aria-hidden="true">▶</span></span>
+            </span>
+          </button>
+
+          <button class="proyecto proyecto-ancho proyecto-reels" type="button" data-categoria="diseno audiovisual" data-tipo="video" data-versiones="Messi SFX|videos/proyectos/ae-messi.mp4;Diseño con MJR|videos/proyectos/ae-mjr.mp4;Smooth Drift|videos/proyectos/ae-drift.mp4" data-titulo="Motion graphics · After Effects" data-desc="Tres piezas verticales para redes hechas en After Effects: un edit motivacional de Messi con tipografía cinética y diseño sonoro, la animación del logo «Diseño con MJR» y un edit de drift con transiciones suaves y efecto de velocidad.">
+            <span class="reels" aria-hidden="true"><span class="reel-tel"><img src="imagenes/proyectos/ae-messi.jpg" alt="" loading="lazy" /><video src="videos/proyectos/ae-messi-preview.mp4" muted loop playsinline preload="none" aria-hidden="true"></video></span><span class="reel-tel"><img src="imagenes/proyectos/ae-mjr.jpg" alt="" loading="lazy" /><video src="videos/proyectos/ae-mjr-preview.mp4" muted loop playsinline preload="none" aria-hidden="true"></video></span><span class="reel-tel"><img src="imagenes/proyectos/ae-drift.jpg" alt="" loading="lazy" /><video src="videos/proyectos/ae-drift-preview.mp4" muted loop playsinline preload="none" aria-hidden="true"></video></span></span>
+            <span class="proyecto-duracion">3 reels · 9:16</span>
+            <span class="proyecto-info">
+              <span class="proyecto-meta">Motion graphics · After Effects · Formato vertical</span>
+              <span class="proyecto-titulo">Reels en After Effects</span>
+              <span class="proyecto-tags"><span>Tipografía cinética</span><span>Logo animado</span><span>SFX</span><span>Transiciones</span></span>
+              <span class="proyecto-accion">Ver los 3 reels <span aria-hidden="true">▶</span></span>
+            </span>
+          </button>
+
+          <button class="proyecto proyecto-ancho" type="button" data-categoria="audiovisual ia" data-tipo="video" data-versiones="Emotivo|videos/proyectos/micro-emotivo.mp4;Dramático|videos/proyectos/micro-dramatico.mp4;Juvenil|videos/proyectos/micro-juvenil.mp4" data-titulo="Micro videos ambientales" data-desc="Una misma historia sobre limpiar el río del barrio, contada en tres tonos distintos: emotivo, dramático y juvenil. Un ejercicio de cómo la música, el ritmo y el montaje cambian el mensaje.">
+            <span class="proyecto-media">
+              <img src="imagenes/proyectos/micro.jpg" alt="" loading="lazy" />
+              <video src="videos/proyectos/micro-preview.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+            </span>
+            <span class="proyecto-duracion">3 versiones</span>
+            <span class="proyecto-info">
+              <span class="proyecto-meta">Serie · IA generativa</span>
+              <span class="proyecto-titulo">Micro videos ambientales</span>
+              <span class="proyecto-tags"><span>Emotivo</span><span>Dramático</span><span>Juvenil</span></span>
+              <span class="proyecto-accion">Ver las 3 versiones <span aria-hidden="true">▶</span></span>
+            </span>
+          </button>
+
+          <button class="proyecto proyecto-podcast" type="button" data-categoria="audio" data-tipo="audio" data-src="videos/proyectos/podcast-el-perro.m4a" data-portada="imagenes/proyectos/podcast.jpg" data-titulo="Historias de colegio · El perro se meó la tarea" data-desc="Podcast nostálgico sobre esas historias de colegio que todos vivimos: el primer día, los amigos, la tarea copiada a última hora. Escaleta, locución, música y diseño sonoro, con Jesús Turizo.">
+            <span class="proyecto-media">
+              <img src="imagenes/proyectos/podcast.jpg" alt="" loading="lazy" />
+            </span>
+            <span class="proyecto-duracion">5:49</span>
+            <span class="proyecto-info">
+              <span class="proyecto-meta">Podcast · Historias de colegio</span>
+              <span class="proyecto-titulo">El perro se meó la tarea</span>
+              <span class="proyecto-tags"><span>Escaleta</span><span>Locución</span><span>Con Jesús Turizo</span></span>
+              <span class="proyecto-accion">Escuchar episodio <span aria-hidden="true">▶</span></span>
+            </span>
+          </button>
+
+          <button class="proyecto" type="button" data-categoria="diseno" data-tipo="imagen" data-src="banner/banner-mario.jpg" data-titulo="Banner · Portafolio Mario" data-desc="Banner principal de este portafolio, diseñado en Photoshop con capas editables y adaptado después a la web.">
+            <span class="proyecto-media lienzo"><span class="lienzo-medida">1920 × 1080 px · PSD</span><img src="banner/banner-mario.jpg" alt="" loading="lazy" /></span>
+            <span class="proyecto-info">
+              <span class="proyecto-meta">Diseño gráfico · Photoshop</span>
+              <span class="proyecto-titulo">Banner del portafolio</span>
+              <span class="proyecto-tags"><span>Composición</span><span>Tipografía</span><span>Retoque</span></span>
+              <span class="proyecto-accion">Ver diseño <span aria-hidden="true">↗</span></span>
+            </span>
+          </button>
+
+          <a class="proyecto proyecto-web proyecto-ancho" href="#inicio" data-categoria="web">
+            <span class="proyecto-media navegador">
+              <span class="navegador-barra"><i></i><i></i><i></i><span>mario.portafolio</span></span>
+              <img src="banner/banner-mario.jpg" alt="" loading="lazy" />
+            </span>
+            <span class="telefono" aria-hidden="true"><img src="imagenes/web-movil.jpg" alt="" loading="lazy" /></span>
+            <span class="proyecto-info">
+              <span class="proyecto-meta">Página web · HTML · CSS · JS</span>
+              <span class="proyecto-titulo">Este portafolio</span>
+              <span class="proyecto-tags"><span>Responsive</span><span>Formulario</span><span>Interacción</span></span>
+              <span class="proyecto-accion">Estás navegándolo <span aria-hidden="true">↑</span></span>
+            </span>
+          </a>
+
+          <a class="proyecto proyecto-siguiente" href="#contacto" data-categoria="todos">
+            <span class="siguiente-texto"><span class="proyecto-meta">Próximo proyecto</span><span class="proyecto-titulo">Tu idea podría estar aquí.</span></span>
+            <span class="siguiente-flecha" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <dialog class="visor" id="visor" aria-label="Vista del proyecto">
+        <div class="visor-cabecera"><p class="visor-titulo"></p><button class="visor-cerrar" type="button" aria-label="Cerrar">✕</button></div>
+        <div class="visor-contenido"></div>
+        <div class="visor-pie"><div class="visor-versiones"></div><p class="visor-desc"></p></div>
+      </dialog>
+
+      <section class="seccion reel">
+        <p class="etiqueta">Video reel</p>
+        <h2>Mi trabajo también se mueve.</h2>
+        <div class="video-contenedor">
+          <video controls poster="imagenes/video-salud-mental-portada.jpg">
+            <source src="videos/salud-mental.mp4" type="video/mp4" />
+            Tu navegador no puede reproducir este video.
+          </video>
+          <p class="aviso-video">Proyecto audiovisual: <code>Salud mental</code>.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contacto">
+      <div class="contacto">
+        <div class="contacto-texto">
+          <p class="etiqueta">Contacto</p>
+          <h2>¿Tienes una idea?<br /><em>Hagámosla visible.</em></h2>
+          <p class="contacto-intro">Cuéntame sobre tu proyecto: qué necesitas, para cuándo y cualquier referencia que tengas. Te responderé lo antes posible.</p>
+          <a class="correo" href="mailto:marjunioralban@gmail.com">marjunioralban@gmail.com</a>
+        </div>
+
+        <!-- Los mensajes se envían a tu correo mediante FormSubmit (formsubmit.co). -->
+        <form class="formulario" id="formulario-contacto" action="https://formsubmit.co/marjunioralban@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portafolio" />
+          <input type="hidden" name="_template" value="table" />
+          <input class="trampa" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <div class="campos-dobles">
+            <label class="campo">
+              <span>Nombre</span>
+              <input type="text" name="nombre" autocomplete="name" placeholder="Tu nombre" required />
+            </label>
+            <label class="campo">
+              <span>Correo</span>
+              <input type="email" name="email" autocomplete="email" placeholder="tu@correo.com" required />
+            </label>
+          </div>
+          <label class="campo">
+            <span>¿Qué necesitas?</span>
+            <select name="servicio" required>
+              <option value="" disabled selected>Elige un servicio</option>
+              <option>Producción audiovisual</option>
+              <option>Páginas web</option>
+              <option>Videos interactivos</option>
+              <option>Motion graphics</option>
+              <option>Contenido para redes</option>
+              <option>Diseño gráfico y banners</option>
+              <option>Fotografía y retoque</option>
+              <option>Otro</option>
+            </select>
+          </label>
+          <label class="campo">
+            <span>Mensaje</span>
+            <textarea name="mensaje" rows="5" minlength="10" placeholder="Cuéntame sobre tu proyecto, fechas y presupuesto aproximado." required></textarea>
+          </label>
+          <button class="boton" type="submit"><span class="boton-texto">Enviar mensaje</span> <span aria-hidden="true">→</span></button>
+          <p class="estado-formulario" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+      <div class="pie-inferior"><p>© 2026 Mario — Diseñador Hipermedia</p><div><a href="#">Instagram</a><a href="#">LinkedIn</a></div></div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="js/hero.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    <script src="js/modelo-logo.js"></script>
+    <script src="js/marca3d.js"></script>
+    <script src="js/servicios.js"></script>
+    <script src="js/proyectos.js"></script>
+    <script src="js/contacto.js"></script>
+  </body>
+</html>

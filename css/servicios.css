@@ -1,0 +1,305 @@
+/* Sección "Mis servicios" */
+
+.servicios h2 {
+  font-size: clamp(2.5rem,5vw,5rem);
+}
+
+.servicios {
+  background: var(--fondo-suave);
+  overflow: hidden;
+}
+
+.servicios-cabecera {
+  align-items: end;
+  display: grid;
+  gap: 6vw;
+  grid-template-columns: 1.4fr 1fr;
+}
+
+.servicios h2 {
+  max-width: 780px;
+}
+
+.servicios-intro {
+  color: var(--gris);
+  font-size: 1.08rem;
+  line-height: 1.65;
+  max-width: 420px;
+}
+
+.cinta {
+  border-block: 1px solid var(--linea);
+  margin: 60px -10vw 50px;
+  overflow: hidden;
+  padding: 18px 0;
+}
+
+.cinta-pista {
+  animation: cinta 32s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+.cinta span {
+  color: var(--texto);
+  font: 500 clamp(1.1rem,1.8vw,1.6rem) Outfit, sans-serif;
+  padding: 0 28px;
+  white-space: nowrap;
+}
+
+.cinta span::after {
+  color: var(--acento);
+  content: "✦";
+  font-size: .7em;
+  margin-left: 56px;
+}
+
+@keyframes cinta {
+  to {
+    transform: translateX(-50%);
+  }
+
+}
+
+.grid-servicios {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(4,1fr);
+}
+
+.servicio {
+  background: var(--fondo);
+  border: 1px solid var(--linea);
+  display: flex;
+  flex-direction: column;
+  isolation: isolate;
+  min-height: 340px;
+  overflow: hidden;
+  padding: 30px;
+  position: relative;
+  transition: border-color .3s, transform .3s;
+}
+
+.servicio-ancho {
+  grid-column: span 2;
+}
+
+.servicio::before {
+  background: radial-gradient(420px circle at var(--x,50%) var(--y,50%),#d9ff4522,transparent 60%);
+  content: "";
+  inset: 0;
+  opacity: 0;
+  position: absolute;
+  transition: opacity .3s;
+  z-index: -1;
+}
+
+.servicio:hover {
+  border-color: var(--acento);
+  transform: translateY(-4px);
+}
+
+.servicio:hover::before {
+  opacity: 1;
+}
+
+.servicio-imagen::after {
+  background: linear-gradient(180deg,#111111e6 0%,#111111b3 45%,#111 100%),var(--fondo-tarjeta) var(--pos-tarjeta,center)/cover;
+  content: "";
+  filter: grayscale(100%);
+  inset: 0;
+  position: absolute;
+  transition: filter .5s, transform .6s;
+  z-index: -2;
+}
+
+.servicio-imagen:hover::after {
+  filter: grayscale(0);
+  transform: scale(1.05);
+}
+
+.servicio-top {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: auto;
+  padding-bottom: 40px;
+}
+
+.servicio-num {
+  color: var(--acento);
+  font: .75rem "DM Mono",monospace;
+}
+
+.servicio-icono {
+  border: 1px solid var(--linea);
+  fill: none;
+  height: 52px;
+  padding: 12px;
+  stroke: var(--texto);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+  transition: background .3s, stroke .3s, border-color .3s, transform .3s;
+  width: 52px;
+}
+
+.servicio:hover .servicio-icono {
+  background: var(--acento);
+  border-color: var(--acento);
+  stroke: #111;
+  transform: rotate(-8deg);
+}
+
+.servicio h3 {
+  font-size: clamp(1.4rem,1.8vw,1.9rem);
+  letter-spacing: -.03em;
+  line-height: 1.05;
+  margin-bottom: 12px;
+}
+
+.servicio p {
+  color: var(--gris);
+  line-height: 1.55;
+  max-width: 520px;
+}
+
+.servicio p em {
+  color: var(--texto);
+  font-style: normal;
+}
+
+.etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 20px 0 22px;
+  padding: 0;
+}
+
+.etiquetas li {
+  border: 1px solid var(--linea);
+  border-radius: 99px;
+  color: #d0ccc5;
+  font: .68rem "DM Mono",monospace;
+  padding: 6px 11px;
+}
+
+.servicio-cta {
+  align-self: flex-start;
+  border-bottom: 1px solid var(--acento);
+  font-size: .9rem;
+  font-weight: 600;
+  padding-bottom: 3px;
+  transition: color .2s;
+}
+
+.servicio-cta span {
+  color: var(--acento);
+  display: inline-block;
+  transition: transform .25s;
+}
+
+.servicio-cta:hover {
+  color: var(--acento);
+}
+
+.servicio-cta:hover span {
+  transform: translateX(5px);
+}
+
+.servicio-llamado {
+  background: var(--acento);
+  border-color: var(--acento);
+  color: #111;
+  justify-content: flex-end;
+}
+
+.servicio-llamado .servicio-num {
+  color: #111;
+  font-size: 1.6rem;
+  left: 30px;
+  position: absolute;
+  top: 24px;
+}
+
+.servicio-llamado h3 {
+  font-size: clamp(1.8rem,3vw,3rem);
+  max-width: 520px;
+}
+
+.servicio-llamado p {
+  color: #2b2b2b;
+}
+
+.llamado-flecha {
+  font-size: 3rem;
+  line-height: 1;
+  position: absolute;
+  right: 30px;
+  top: 22px;
+  transition: transform .3s;
+}
+
+.servicio-llamado:hover {
+  border-color: var(--acento);
+}
+
+.servicio-llamado:hover .llamado-flecha {
+  transform: translate(6px,-6px);
+}
+
+.servicio-llamado::before {
+  background: radial-gradient(420px circle at var(--x,50%) var(--y,50%),#ffffff66,transparent 60%);
+}
+
+/* Fotos de fondo de las tarjetas con imagen */
+.servicio-imagen-salud {
+  --fondo-tarjeta: url("../imagenes/video-salud-mental-portada.jpg");
+}
+
+.servicio-imagen-banner {
+  --fondo-tarjeta: url("../imagenes/banner-fondo.jpg");
+  --pos-tarjeta: 75% 20%;
+}
+
+/* Adaptación a pantallas y preferencias */
+
+@media (max-width:1100px) {
+  .grid-servicios {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .cinta-pista {
+    animation: none;
+  }
+}
+
+@media (max-width:900px) {
+  .servicios-cabecera {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width:700px) {
+  .grid-servicios {
+    grid-template-columns: 1fr;
+  }
+
+  .servicio-ancho {
+    grid-column: auto;
+  }
+
+  .servicio {
+    min-height: 0;
+    padding: 26px;
+  }
+
+  .cinta {
+    margin: 44px -7vw 36px;
+  }
+}

@@ -1,0 +1,300 @@
+/* =========================================================
+   ANDRÉS Y EL LINCE — Estilos de la experiencia cinematográfica
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+#cine {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#reproductor {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+}
+
+/* ---------------------------------------------------------
+   Capas superpuestas (portada, decisión, fin)
+   --------------------------------------------------------- */
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5vh 5vw;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.35) 35%,
+    rgba(0, 0, 0, 0.0) 60%
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+  z-index: 10;
+}
+
+.overlay:not(.oculto) {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.oculto {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* ---------------------------------------------------------
+   Portada
+   --------------------------------------------------------- */
+
+.titulo {
+  color: #f2f2f2;
+  font-size: clamp(3rem, 8vw, 6rem);
+  letter-spacing: 0.14em;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 1.4rem;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.8);
+}
+
+.subtitulo {
+  color: #b8b8b8;
+  font-size: clamp(1.3rem, 2.8vw, 1.9rem);
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.creditos {
+  color: #a0a0a0;
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  letter-spacing: 0.05em;
+  margin-bottom: 3.5rem;
+  max-width: 85%;
+}
+
+/* ---------------------------------------------------------
+   Decisión narrativa
+   --------------------------------------------------------- */
+
+.pregunta-decision {
+  color: #f2f2f2;
+  font-size: clamp(1.6rem, 3.6vw, 2.6rem);
+  letter-spacing: 0.03em;
+  margin-bottom: 3rem;
+  max-width: 80%;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.9);
+}
+
+.opciones-decision {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  justify-content: center;
+}
+
+/* ---------------------------------------------------------
+   Botones
+   --------------------------------------------------------- */
+
+.boton-decision {
+  background: rgba(20, 20, 20, 0.55);
+  color: #f2f2f2;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 2px;
+  padding: 1.3rem 3.2rem;
+  font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 400;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-decision:hover,
+.boton-decision:focus-visible {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.boton-decision:active {
+  transform: translateY(0);
+}
+
+/* ---------------------------------------------------------
+   Barra de control del clip actual (aparece con hover)
+   --------------------------------------------------------- */
+
+.controles {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.6rem 2.2rem 1.4rem;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.0) 100%
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+  z-index: 5;
+}
+
+.controles.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.btn-play-pausa {
+  background: none;
+  border: none;
+  color: #f2f2f2;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+  flex-shrink: 0;
+}
+
+.btn-play-pausa:hover {
+  opacity: 1;
+}
+
+.tiempo {
+  color: #e0e0e0;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+  min-width: 2.6em;
+  text-align: center;
+}
+
+.barra-progreso {
+  position: relative;
+  flex: 1;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.progreso-fondo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 2px;
+  transition: height 0.15s ease;
+}
+
+.progreso-relleno {
+  position: absolute;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: #f2f2f2;
+  border-radius: 2px;
+  pointer-events: none;
+  transition: height 0.15s ease;
+}
+
+.progreso-manija {
+  position: absolute;
+  left: 0%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #f2f2f2;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.15s ease;
+  pointer-events: none;
+  box-shadow: 0 0 6px rgba(0,0,0,0.6);
+}
+
+.barra-progreso:hover .progreso-fondo,
+.barra-progreso:hover .progreso-relleno {
+  height: 5px;
+}
+
+.barra-progreso:hover .progreso-manija {
+  transform: translateX(-50%) scale(1);
+}
+
+/* ---------------------------------------------------------
+   Fin de historia
+   --------------------------------------------------------- */
+
+.texto-fin {
+  color: #f2f2f2;
+  font-size: clamp(2.2rem, 5.5vw, 3.6rem);
+  letter-spacing: 0.3em;
+  font-weight: 300;
+  margin-bottom: 3.5rem;
+  text-transform: uppercase;
+}
+
+/* ---------------------------------------------------------
+   Responsivo
+   --------------------------------------------------------- */
+
+@media (max-width: 600px) {
+  .opciones-decision {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .boton-decision {
+    width: 100%;
+  }
+
+  .controles {
+    padding: 1.2rem 1.2rem 1rem;
+    gap: 0.7rem;
+  }
+
+  .tiempo {
+    font-size: 0.7rem;
+  }
+}

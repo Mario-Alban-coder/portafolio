@@ -1,0 +1,7 @@
+# Archivos de trabajo que la página no usa (se quedan solo en el computador)
+videos/Video salud mental.mov
+imagenes/IMG_4161-1.JPG
+banner/*.psd
+banner/*.jsx
+logo/
+.DS_Store

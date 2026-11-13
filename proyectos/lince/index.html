@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LINCE</title>
+  <meta name="description" content="Cortometraje interactivo hecho por Mario Alban y Jossie Acuña, Semestre 7, clase Profundización 1, Diseño Hipermedia." />
+  <meta name="author" content="Mario Alban, Jossie Acuña" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="cine">
+
+    <video id="reproductor" playsinline></video>
+
+    <!-- Barra de control del clip actual (aparece solo al pasar el mouse) -->
+    <div id="controles" class="controles">
+      <button id="btn-play-pausa" class="btn-play-pausa" aria-label="Reproducir o pausar">
+        <svg id="icono-play" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+        <svg id="icono-pausa" viewBox="0 0 24 24" width="18" height="18" style="display:none"><path fill="currentColor" d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+      </button>
+
+      <span id="tiempo-actual" class="tiempo">0:00</span>
+
+      <div id="barra-progreso" class="barra-progreso">
+        <div id="progreso-fondo" class="progreso-fondo"></div>
+        <div id="progreso-relleno" class="progreso-relleno"></div>
+        <div id="progreso-manija" class="progreso-manija"></div>
+      </div>
+
+      <span id="tiempo-total" class="tiempo">0:00</span>
+
+      <button id="btn-pantalla-completa" class="btn-play-pausa" aria-label="Pantalla completa">
+        <svg id="icono-expandir" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+        <svg id="icono-contraer" viewBox="0 0 24 24" width="18" height="18" style="display:none"><path fill="currentColor" d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z"/></svg>
+      </button>
+    </div>
+
+    <!-- Pantalla de carga / portada -->
+    <div id="portada" class="overlay">
+      <h1 class="titulo">LINCE</h1>
+      <p class="subtitulo">Una película interactiva</p>
+      <p class="creditos">Por Mario Alban y Jossie Acuña — Semestre 7, Profundización 1, Diseño Hipermedia</p>
+      <button id="btn-iniciar" class="boton-decision">COMENZAR</button>
+    </div>
+
+    <!-- Contenedor de botones de decisión (se llena dinámicamente) -->
+    <div id="capa-decision" class="overlay oculto">
+      <p id="texto-decision" class="pregunta-decision"></p>
+      <div id="opciones-decision" class="opciones-decision"></div>
+    </div>
+
+    <!-- Pantalla de fin de escena / fin de historia -->
+    <div id="capa-fin" class="overlay oculto">
+      <p class="texto-fin">FIN</p>
+      <button id="btn-reiniciar" class="boton-decision">VOLVER AL INICIO</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

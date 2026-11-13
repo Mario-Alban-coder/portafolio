@@ -1,0 +1,172 @@
+/* Sección "Mi marca en 3D": modelo 3D interactivo del logo */
+
+.marca3d {
+  align-items: center;
+  display: grid;
+  gap: 7vw;
+  grid-template-columns: 1fr minmax(320px, 1.05fr);
+}
+
+/* ---------- Escenario del modelo ---------- */
+
+.marca3d-escena {
+  aspect-ratio: 1 / 1;
+  background:
+    radial-gradient(circle at 50% 42%, #2c2c2c 0%, #171717 55%, #0d0d0d 100%);
+  border: 1px solid var(--linea);
+  max-height: 640px;
+  position: relative;
+  width: 100%;
+}
+
+.marca3d-escena model-viewer {
+  --poster-color: transparent;
+  --progress-bar-color: var(--acento);
+  background: transparent;
+  cursor: grab;
+  height: 100%;
+  width: 100%;
+}
+
+.marca3d-escena model-viewer::part(default-progress-bar) {
+  display: none;
+}
+
+.marca3d-escena model-viewer:active {
+  cursor: grabbing;
+}
+
+/* Esquinas de visor de cámara */
+.marca3d-esquina {
+  border: 3px solid var(--texto);
+  height: 44px;
+  pointer-events: none;
+  position: absolute;
+  width: 44px;
+}
+
+.marca3d-esquina:nth-of-type(1) { border-bottom: 0; border-right: 0; left: 22px; top: 22px; }
+.marca3d-esquina:nth-of-type(2) { border-bottom: 0; border-left: 0; right: 22px; top: 22px; }
+.marca3d-esquina:nth-of-type(3) { border-right: 0; border-top: 0; bottom: 22px; left: 22px; }
+.marca3d-esquina:nth-of-type(4) { border-left: 0; border-top: 0; bottom: 22px; right: 22px; }
+
+.marca3d-rec,
+.marca3d-pista {
+  color: var(--gris);
+  font: 500 0.68rem "DM Mono", monospace;
+  letter-spacing: 0.14em;
+  pointer-events: none;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+.marca3d-rec {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  left: 44px;
+  top: 40px;
+}
+
+.marca3d-rec i {
+  animation: parpadeo 1.2s steps(2, start) infinite;
+  background: var(--acento);
+  border-radius: 50%;
+  height: 9px;
+  width: 9px;
+}
+
+.marca3d-pista {
+  bottom: 38px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  transition: opacity 0.4s;
+}
+
+.marca3d-pista span {
+  color: var(--acento);
+}
+
+/* La pista se esconde cuando ya giraste el modelo */
+.marca3d-escena.usado .marca3d-pista {
+  opacity: 0;
+}
+
+/* ---------- Controles ---------- */
+
+.marca3d-controles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.marca3d-accion {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--linea);
+  color: var(--gris);
+  cursor: pointer;
+  font: 0.72rem "DM Mono", monospace;
+  letter-spacing: 0.06em;
+  margin-right: 14px;
+  padding: 8px 0;
+  text-transform: uppercase;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.marca3d-accion:hover,
+.marca3d-accion[aria-pressed="true"] {
+  border-color: var(--acento);
+  color: var(--texto);
+}
+
+.marca3d-accion[aria-pressed="true"]::before {
+  color: var(--acento);
+  content: "● ";
+}
+
+.marca3d-datos {
+  border-top: 1px solid var(--linea);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 38px;
+  list-style: none;
+  margin-top: 34px;
+  padding: 24px 0 0;
+}
+
+.marca3d-datos li {
+  color: var(--gris);
+  font: 0.68rem "DM Mono", monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.marca3d-datos b {
+  color: var(--texto);
+  display: block;
+  font: 700 1.7rem Outfit, sans-serif;
+  letter-spacing: -0.03em;
+}
+
+/* ---------- Adaptación a pantallas y preferencias ---------- */
+
+@media (max-width: 900px) {
+  .marca3d {
+    gap: 40px;
+    grid-template-columns: 1fr;
+  }
+
+  /* En pantallas pequeñas el modelo va primero */
+  .marca3d-escena {
+    order: -1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marca3d-rec i {
+    animation: none;
+  }
+}

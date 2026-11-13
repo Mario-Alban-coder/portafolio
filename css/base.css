@@ -1,0 +1,165 @@
+/* Base: variables, tipografía, botones y sección "Acerca de mí" */
+
+:root {
+  --fondo: #111111;
+  --fondo-suave: #1a1a1a;
+  --texto: #f4f1eb;
+  --gris: #ada9a1;
+  --acento: #d9ff45;
+  --linea: #373737;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+body {
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: Outfit, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.boton {
+  background: var(--acento);
+  color: #111;
+  display: inline-flex;
+  font-weight: 700;
+  gap: 24px;
+  padding: 14px 20px;
+  transition: transform .25s, background .25s;
+}
+
+.boton:hover {
+  background: #fff;
+  transform: translateY(-3px);
+}
+
+.boton-pequeno {
+  font-size: .85rem;
+  padding: 10px 14px;
+}
+
+.etiqueta {
+  color: var(--acento);
+  font-family: "DM Mono", monospace;
+  font-size: .72rem;
+  letter-spacing: .08em;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: clamp(3rem,7vw,7rem);
+  letter-spacing: -.055em;
+  line-height: .92;
+  max-width: 900px;
+}
+
+h2 em {
+  color: var(--acento);
+  font-style: normal;
+}
+
+.enlace-texto {
+  border-bottom: 1px solid var(--acento);
+  padding-bottom: 4px;
+  transition: color .2s;
+}
+
+.enlace-texto:hover {
+  color: var(--acento);
+}
+
+.enlace-texto span {
+  color: var(--acento);
+}
+
+.seccion {
+  padding: 130px 10vw;
+  position: relative;
+}
+
+.numero {
+  color: #393939;
+  font: 1rem "DM Mono",monospace;
+  left: 5vw;
+  position: absolute;
+  top: 138px;
+}
+
+.acerca {
+  display: grid;
+  gap: 8vw;
+  grid-template-columns: minmax(240px, .8fr) 1fr;
+}
+
+.foto-perfil {
+  max-height: 610px;
+  overflow: hidden;
+}
+
+.foto-perfil img {
+  filter: grayscale(100%);
+  height: 100%;
+  min-height: 440px;
+  object-fit: cover;
+  transition: filter .5s, transform .5s;
+  width: 100%;
+}
+
+.foto-perfil:hover img {
+  filter: grayscale(0);
+  transform: scale(1.04);
+}
+
+.contenido-seccion {
+  align-self: center;
+}
+
+.contenido-seccion h2 {
+  font-size: clamp(2.5rem,5vw,5rem);
+}
+
+.contenido-seccion > p:not(.etiqueta) {
+  color: var(--gris);
+  font-size: 1.08rem;
+  line-height: 1.65;
+  margin: 22px 0;
+  max-width: 520px;
+}
+
+.contenido-seccion .enlace-texto {
+  display: inline-block;
+  margin-top: 12px;
+}
+
+/* Adaptación a pantallas y preferencias */
+
+@media (max-width:700px) {
+  .seccion {
+    padding: 90px 7vw;
+  }
+
+  .numero {
+    display: none;
+  }
+
+  .acerca {
+    grid-template-columns: 1fr;
+  }
+
+  .foto-perfil img {
+    min-height: 360px;
+  }
+}
