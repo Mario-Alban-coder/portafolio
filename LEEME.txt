@@ -1,0 +1,55 @@
+PORTAFOLIO WEB - MARIO ALBAN
+Diseñador hipermedia · audiovisual
+
+Sitio publicado:  https://mario-alban-coder.github.io/portafolio/
+Repositorio:      https://github.com/Mario-Alban-coder/portafolio
+
+Para verlo sin internet: abrir index.html en el navegador.
+(Las tipografías y el visor del modelo 3D se cargan desde internet.)
+
+
+ORGANIZACIÓN DEL CÓDIGO
+Cada lenguaje está en su propia carpeta y en archivos separados.
+
+  index.html            HTML    Página principal (sin estilos ni scripts dentro)
+
+  css/                  CSS     Un archivo por sección
+    base.css                    Colores, tipografía, botones, "Acerca de mí"
+    menu.css                    Encabezado y menú hamburguesa
+    hero.css                    Banner animado (carrusel)
+    marca3d.css                 Sección del modelo 3D
+    servicios.css               Mis servicios
+    proyectos.css               Galería de proyectos y visor
+    contacto.css                Formulario y pie de página
+
+  js/                   JS      Un archivo por función
+    menu.js                     Abrir y cerrar el menú hamburguesa
+    hero.js                     Carrusel del banner animado
+    marca3d.js                  Controles del modelo 3D
+    modelo-logo.js              Copia del modelo 3D para abrir sin servidor
+    servicios.js                Efectos de las tarjetas de servicios
+    proyectos.js                Filtros, vistas previas y visor
+    contacto.js                 Envío del formulario
+
+  python/               Python  crear-modelo.py: genera el modelo 3D del logo
+
+  proyectos/lince/              Película interactiva LINCE (sub-sitio)
+    index.html          HTML
+    css/style.css       CSS
+    js/script.js        JS
+    videos/                     Escenas de la película
+
+
+ARCHIVOS DE CONTENIDO
+  modelos/logo-m.glb            Modelo 3D del logo
+  imagenes/                     Fotos, portadas e íconos
+  videos/                       Videos del banner y de los proyectos
+  banner/                       Imagen del banner diseñado en Photoshop
+
+
+REQUISITOS DE LA ENTREGA
+  Elemento 3D ............ sección "Una M que nunca está quieta" (modelo 3D)
+  Banner animado ......... carrusel de inicio con video y texto animado
+  Menú hamburguesa ....... aparece en tablet y celular (ancho menor a 900 px)
+  Formulario ............. sección Contacto, envía los mensajes por correo
+  Sitio en internet ...... GitHub Pages (URL arriba)

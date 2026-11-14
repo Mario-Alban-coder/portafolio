@@ -58,9 +58,8 @@ function mostrarEnVisor(proyecto) {
     marco.allowFullscreen = true;
     visorContenido.append(marco);
   } else if (tipo === "audio") {
-    const bloque = document.createElement("div");
-    bloque.className = "visor-audio";
-    bloque.innerHTML = `<img alt="" /><div><p>Episodio de podcast</p><h3></h3><audio controls autoplay></audio></div>`;
+    // La estructura del reproductor está en index.html (plantilla "plantilla-audio").
+    const bloque = document.getElementById("plantilla-audio").content.firstElementChild.cloneNode(true);
     bloque.querySelector("img").src = portada;
     bloque.querySelector("h3").textContent = proyecto.querySelector(".proyecto-titulo").textContent;
     bloque.querySelector("audio").src = src;
@@ -103,6 +102,7 @@ visor.addEventListener("click", (evento) => {
   if (evento.target === visor) visor.close();
 });
 visor.addEventListener("close", () => {
+  if (visor.open) return; // ya se abrió otro proyecto: no hay que vaciarlo
   visorContenido.innerHTML = "";
   visorVersiones.innerHTML = "";
 });

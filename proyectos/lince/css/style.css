@@ -298,3 +298,9 @@ html, body {
     font-size: 0.7rem;
   }
 }
+
+/* Íconos que empiezan ocultos (el script los muestra al pausar o al entrar en pantalla completa) */
+#icono-pausa,
+#icono-contraer {
+  display: none;
+}

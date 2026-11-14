@@ -84,7 +84,7 @@ footer h2 {
 }
 
 .campo select {
-  background: var(--fondo) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23d9ff45' stroke-width='1.5'/%3E%3C/svg%3E") right 16px center no-repeat;
+  background: var(--fondo) url("../imagenes/flecha-selector.svg") right 16px center no-repeat;
   cursor: pointer;
   padding-right: 44px;
 }

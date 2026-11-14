@@ -1,7 +1,7 @@
 """Genera el modelo 3D del logo "M en marcha" en formato GLB (glTF binario).
 
 Uso:  python3 crear-modelo.py
-Crea logo-m.glb en esta misma carpeta. No necesita librerías externas.
+Crea modelos/logo-m.glb. No necesita librerías externas.
 """
 import json
 import math
@@ -208,7 +208,7 @@ gltf = {
 texto = json.dumps(gltf, separators=(",", ":")).encode("utf-8")
 texto += b" " * (-len(texto) % 4)
 
-salida = os.path.join(AQUI, "logo-m.glb")
+salida = os.path.join(AQUI, "..", "modelos", "logo-m.glb")
 with open(salida, "wb") as f:
     f.write(struct.pack("<4sII", b"glTF", 2, 12 + 8 + len(texto) + 8 + len(binario)))
     f.write(struct.pack("<I4s", len(texto), b"JSON") + texto)
