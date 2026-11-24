@@ -39,6 +39,14 @@ Cada lenguaje está en su propia carpeta y en archivos separados.
     js/script.js        JS
     videos/                     Escenas de la película
 
+  proyectos/voy-llegando/       Podcast «Voy llegando», episodio interactivo (sub-sitio)
+    index.html          HTML
+    css/style.css       CSS
+    js/script.js        JS      Rutas, botón «Voy llegando», diccionario, votos y muro
+    js/transcripcion.js JS      Transcripción con los tiempos del audio
+    audio/                      Capítulo 1 en MP3
+    datos/muro.json             Historias aprobadas para el muro (llegan por correo con FormSubmit)
+
 
 ARCHIVOS DE CONTENIDO
   modelos/logo-m.glb            Modelo 3D del logo
